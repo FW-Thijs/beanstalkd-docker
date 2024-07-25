@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  beanstalkd:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: beanstalkd
+    image: beanstalkd-docker
+    restart: always
+    ports:
+      - 11300:11300
